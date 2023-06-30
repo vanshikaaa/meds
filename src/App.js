@@ -1,22 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from "react";
+import Poopy from "./components/Poopy";
+import Dad from "./components/Dad";
 
 function App() {
+  const [poopy, setPoopy] = useState("");
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {(poopy === "") ? <>
+          <button class="home" onClick={() => {setPoopy(true)}}>I am Poopy</button>
+          <button class="home" onClick={() => {setPoopy(false)}}>I am Rick Alan Feese born April 2nd 1975 age 48</button>
+        </> : <><button class="back" onClick={() => {setPoopy("")}}>Back</button> {(poopy) ? <Poopy/> : <Dad/>}</>}
       </header>
     </div>
   );
