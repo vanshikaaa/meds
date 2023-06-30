@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/meds/static/css/main.768a93ba.css",
+    "main.js": "/meds/static/js/main.f3e750ef.js",
+    "index.html": "/meds/index.html",
+    "main.768a93ba.css.map": "/meds/static/css/main.768a93ba.css.map",
+    "main.f3e750ef.js.map": "/meds/static/js/main.f3e750ef.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.768a93ba.css",
+    "static/js/main.f3e750ef.js"
+  ]
+}
