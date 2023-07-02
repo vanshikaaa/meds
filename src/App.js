@@ -26,7 +26,7 @@ function App() {
           <button class="home" onClick={() => {setPoopy(true)}}>I am Poopy</button>
           <button class="home" onClick={() => {setPoopy(false)}}>I am Rick Alan Feese born April 2nd 1975 age 48</button>
         </> : <><button class="back" onClick={() => {setPoopy("")}}>Back</button> {(poopy) ? <Poopy/> : <Dad/>}</>}
-        <button onClick={() => {notification()}}>Testing???</button>
+        {/* <button onClick={() => {notification()}}>Testing???</button> */}
       </header>
     </div>
   );
