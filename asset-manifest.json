@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/meds/static/css/main.e077b355.css",
-    "main.js": "/meds/static/js/main.0093f952.js",
+    "main.js": "/meds/static/js/main.4c4e614d.js",
     "index.html": "/meds/index.html",
     "main.e077b355.css.map": "/meds/static/css/main.e077b355.css.map",
-    "main.0093f952.js.map": "/meds/static/js/main.0093f952.js.map"
+    "main.4c4e614d.js.map": "/meds/static/js/main.4c4e614d.js.map"
   },
   "entrypoints": [
     "static/css/main.e077b355.css",
-    "static/js/main.0093f952.js"
+    "static/js/main.4c4e614d.js"
   ]
 }
