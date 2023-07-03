@@ -10,6 +10,7 @@ export default function Poopy (props) {
   const [display, setDisplay] = useState();
 
   const dateObj = new Date();
+  dateObj.setHours(dateObj.getHours() - 2);
   const currentDate = `${dateObj.getMonth() + 1}-${dateObj.getDate()}-${dateObj.getFullYear()}`;
 
   const dates = Array.from(Array(5).keys()).reverse().map((i) => {
@@ -17,11 +18,8 @@ export default function Poopy (props) {
     return `${past.getMonth() + 1}-${past.getDate()}-${past.getFullYear()}`
   });
 
-  // useEffect(() => {
-  //   setTimeout(() => {setUpdate(new Date())}, 1000);
-  // }, [])
-
   const updateDisplay = async() => {
+    console.log(dateObj);
     return Promise.all(dates.map( async (date) => {
       return get(ref(database, '/' + date))
       .then((snap) => {
