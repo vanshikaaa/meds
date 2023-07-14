@@ -65,7 +65,7 @@ export default function Poopy (props) {
   }, [update]);
 
   const takeMeds = (time) => {
-    const data = {timestamp: dateObj, taken: true};
+    const data = {timestamp: new Date().toLocaleString("en-US"), taken: true};
     console.log(data);
     set(ref(database, '/' + currentDate + "/" + time), data);
     setUpdate(new Date());
