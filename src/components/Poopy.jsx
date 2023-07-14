@@ -35,11 +35,11 @@ export default function Poopy (props) {
           return (<>
             {date}<br/>
             {"am" in data ? 
-              <button class="true" onClick={() => {takeMeds("am")}}>Taken AM meds!</button> : 
+              <button class="true"> Taken AM meds! <br/> <div class="time"> {data.am.timestamp} </div> </button> : 
               <button id="curr" onClick={() => {takeMeds("am")}}>Take AM meds</button>}
       
             {"pm" in data ? 
-              <button class="true" onClick={() => {takeMeds("pm")}}>Taken PM meds!</button> : 
+              <button class="true"> Taken PM meds! <br/> <div class="time"> {data.pm.timestamp} </div> </button> : 
               <button id="curr" onClick={() => {takeMeds("pm")}}>Take PM meds</button>}
               <br/>
           </>);
@@ -48,11 +48,11 @@ export default function Poopy (props) {
         return (<>
           {date}<br/>
           {"am" in data ? 
-            <button class="true">Taken AM meds!</button> : 
+            <button class="true">Taken AM meds! <br/> <div class="time"> {data.am.timestamp} </div> </button> : 
             <button class="false">Not taken AM meds</button>}
     
           {"pm" in data ? 
-            <button class="true">Taken PM meds!</button> : 
+            <button class="true">Taken PM meds! <br/> <div class="time"> {data.pm.timestamp} </div> </button> : 
             <button class="false">Not taken PM meds</button>}
             <br/>
         </>);
@@ -65,7 +65,7 @@ export default function Poopy (props) {
   }, [update]);
 
   const takeMeds = (time) => {
-    const data = {timestamp: new Date().toLocaleString("en-US"), taken: true};
+    const data = {timestamp: new Date().toLocaleTimeString("en-US"), taken: true};
     console.log(data);
     set(ref(database, '/' + currentDate + "/" + time), data);
     setUpdate(new Date());
@@ -74,6 +74,7 @@ export default function Poopy (props) {
   return (
     <div>
       Have I taken my meds? <br/><br/>
+      <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.11.0/tsparticles.confetti.bundle.min.js"></script>
       {display}
     </div>
   );

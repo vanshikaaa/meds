@@ -3,7 +3,7 @@
 }
 
 .false {
-  background-color: red;
+  background-color: rgb(227, 103, 103);
 }
 
 button {
@@ -25,4 +25,8 @@ button {
 #curr:hover {
   background-color: #299a51; 
   color: white;
+}
+
+.time {
+  font-size: 14px;
 }

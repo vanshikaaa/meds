@@ -31,11 +31,11 @@ export default function Dad (props) {
           return (<>
             {date}<br/>
             {"am" in data ? 
-              <button class="true">Taken AM meds!</button> : 
+              <button class="true">Taken AM meds! <br/> <div class="time"> {data.am.timestamp} </div> </button> : 
               <button>Not taken AM meds</button>}
       
             {"pm" in data ? 
-              <button class="true">Taken PM meds!</button> : 
+              <button class="true">Taken PM meds! <br/> <div class="time"> {data.pm.timestamp} </div> </button> : 
               <button>Not taken PM meds</button>}
               <br/>
           </>);
@@ -44,11 +44,11 @@ export default function Dad (props) {
         return (<>
           {date}<br/>
           {"am" in data ? 
-            <button class="true">Taken AM meds!</button> : 
+            <button class="true">Taken AM meds! <br/> <div class="time"> {data.am.timestamp} </div> </button> : 
             <button class="false">Not taken AM meds</button>}
     
           {"pm" in data ? 
-            <button class="true">Taken PM meds!</button> : 
+            <button class="true">Taken PM meds! <br/> <div class="time"> {data.pm.timestamp} </div> </button> : 
             <button class="false">Not taken PM meds</button>}
             <br/>
         </>);
